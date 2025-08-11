@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ada's Club</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="nav-bar">
+      <div class="logo">
+        <img src="assets/Ada'slogo.jpg" alt="Ada's Club Logo" class="logo-img" />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#events" class="nav-link">Events</a></li>
+        <li><a href="#members" class="nav-link">Members</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay stylish">
+      <h1 class="glow-text">Welcome to Ada's Club</h1>
+      <p class="hero-sub">Where Code Meets Creativity</p>
+      <a href="#events" class="cta-button">Explore Events</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section" data-aos="fade-up">
+    <h2>About Ada</h2>
+    <p>Ada Lovelace is widely regarded as the first computer programmer. Ada's Club is a space for young innovators to
+      explore, learn, and build technology that changes the world.</p>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="section" data-aos="zoom-in">
+    <h2>Events Timeline</h2>
+    <div class="timeline-container">
+      <div class="timeline-event" onclick="openEventModal('aiWorkshop')">
+        <div class="event-date">Jan 2025</div>
+        <div class="event-content">
+          <h3>AI Workshop</h3>
+          <p><strong>Conducted by:</strong> Vidhula</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="section vision-mission">
+    <div class="vision">
+      <h2>Vision</h2>
+      <p>To empower the next generation of student innovators and tech leaders.</p>
+    </div>
+    <div class="mission">
+      <h2>Mission</h2>
+      <p>To provide hands-on learning, mentorship, and real-world tech exposure through events and projects.</p>
+    </div>
+  </section>
+
+  <!-- Members Section -->
+  <section id="members" class="section" data-aos="fade-left">
+    <h2>Present Student Members</h2>
+    <div class="members">
+      <div class="member-card" onclick="showPresidentCarousel()">
+        <img src="assets/president.jpeg" alt="President" />
+        <p><strong>Jeya Harini</strong><br /><small>President (2024)</small></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact" data-aos="slide-up">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-sub">
+      Ready to join our community of innovators? Have questions about our events or want to collaborate? We'd love to
+      hear from you.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Let's Connect</h3>
+        <p>Whether you're a current student interested in joining, a faculty member looking to collaborate, or an
+          industry professional wanting to engage with our community, we're here to connect and create something amazing
+          together.</p>
+
+        <div class="contact-cards">
+          <div class="card"><span>📧</span><strong>Email Us</strong><br><a
+              href="mailto:adas.club@university.edu">adas.club@university.edu</a></div>
+          <div class="card"><span>📞</span><strong>Call Us</strong><br>+1 (555) 123–4567</div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send us a Message</h3>
+        <form>
+          <div class="form-row">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+          </div>
+          <input type="email" placeholder="Email Address" required>
+          <select required>
+            <option value="">General Inquiry</option>
+            <option value="event">Event Request</option>
+            <option value="feedback">Feedback</option>
+          </select>
+          <textarea rows="4" placeholder="Tell us more about your inquiry..."></textarea>
+          <button type="submit" class="cta-button">📨 Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Ada's Club</h3>
+        <p>Empowering the next generation of tech innovators through collaboration, creativity, and cutting-edge
+          technology.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#members">Members</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p>Engineering Building<br>Room 301<br>University Campus<br><a
+            href="mailto:adas.club@university.edu">adas.club@university.edu</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Ada's Club. All rights reserved. Made with 💛 by Ada's Club Team</p>
+    </div>
+  </footer>
+
+  <!-- Event Modal -->
+  <div id="event-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeEventModal()">&times;</span>
+      <h3 id="eventTitle"></h3>
+      <p><strong>Chief Guest:</strong> <span id="chiefGuest"></span></p>
+      <p><strong>1st Prize:</strong> <span id="firstPrize"></span></p>
+      <p><strong>2nd Prize:</strong> <span id="secondPrize"></span></p>
+    </div>
+  </div>
+
+  <!-- President Modal -->
+  <div id="term-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('term-modal')">&times;</span>
+      <div class="president-box" id="president-box"></div>
+      <hr />
+      <h3>Club Members of 2025</h3>
+      <div class="term-member-slide" id="term-member-slide"></div>
+    </div>
+  </div>
+
+  <!-- Member Carousel Modal -->
+  <div id="member-carousel-modal" class="carousel-modal">
+    <span class="close-btn" onclick="closeCarousel()">&times;</span>
+    <div class="carousel-wrapper">
+      <span class="carousel-arrow" onclick="prevMember()">&#10094;</span>
+      <div class="carousel-slide" id="carousel-slide">
+        <div class="member-gallery">
+          <img src="assets/senior member1.jpeg" class="member-img" alt="Senior Member 1">
+          <img src="assets/senior member2.jpeg" class="member-img" alt="Senior Member 2">
+          <img src="assets/senior member3.jpeg" class="member-img" alt="Senior Member 3">
+          <img src="assets/senior member4.jpeg" class="member-img" alt="Senior Member 4">
+          <img src="assets/club member1.jpeg" class="member-img" alt="Club Member 1">
+          <img src="assets/club member2.jpeg" class="member-img" alt="Club Member 2">
+        </div>
+      </div>
+      <span class="carousel-arrow" onclick="nextMember()">&#10095;</span>
+    </div>
+  </div>
+
+  <!-- Additional Modals -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content animated-modal">
+      <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+      <h2>About Ada</h2>
+      <p>Ada Lovelace is considered the first computer programmer. Ada's Club is inspired by her vision for technology and innovation.</p>
+    </div>
+  </div>
+
+  <div id="eventsModal" class="modal">
+    <div class="modal-content animated-modal">
+      <span class="close" onclick="closeModal('eventsModal')">&times;</span>
+      <h2>Upcoming Events</h2>
+      <p>Check out our workshops, tech talks, and hackathons. Exciting events coming in 2025!</p>
+    </div>
+  </div>
+  <div id="term-modal" class="modal show">
+    <div class="term-member-scroll">
+      <div class="term-member-slide" id="term-member-slide"></div>
+    </div>
+</div>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content animated-modal">
+      <span class="close" onclick="closeModal('contactModal')">&times;</span>
+      <h2>Contact Us</h2>
+      <p>Email: adas.club@university.edu<br>Room 301, Engineering Building</p>
+    </div>
+  </div>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Modal Functions
+    function openModal(id) {
+      document.getElementById(id).classList.add('show');
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 300);
+    }
+
+    // Event Modal Functions
+    function openEventModal(eventId) {
+      const modal = document.getElementById('event-modal');
+      modal.style.display = 'block';
+      // Add event-specific data here based on eventId
+    }
+
+    function closeEventModal() {
+      document.getElementById('event-modal').style.display = 'none';
+    }
+
+    // President/Member Functions
+    function showPresidentCarousel() {
+      document.getElementById('term-modal').style.display = 'block';
+    }
+
+    function closeCarousel() {
+      document.getElementById('member-carousel-modal').style.display = 'none';
+    }
+
+    function prevMember() {
+      // Add carousel navigation logic
+    }
+
+    function nextMember() {
+      // Add carousel navigation logic
+    }
+
+    // Close modal on background click
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
